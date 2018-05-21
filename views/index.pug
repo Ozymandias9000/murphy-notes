@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1 Murphy Blog
+
+	for post in posts
+		p #{post.body}
+
+	form(action='/addpost' method='POST')
+		label(for='postBody') Add Post
+		textarea(name='postBody')
+		input(type='submit' value='Add Post')
+	
