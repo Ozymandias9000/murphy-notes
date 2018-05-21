@@ -4,7 +4,7 @@ block content
 	h1 Murphy Blog
 
 	for post in posts
-		p #{post.body}
+		p.post #{post.body}
 
 	form(action='/addpost' method='POST')
 		label(for='postBody') Add Post

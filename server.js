@@ -12,7 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true}));
 mongoose.connect("mongodb://localhost:27017/murphy_blog");
 
 // Use pug for views
+app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
+
+app.use(express.static(__dirname + '/public'));
 
 // Routes
 app.get('/', catchErrors(postController.getposts));
