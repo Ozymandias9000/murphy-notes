@@ -2,10 +2,18 @@ doctype html
 html
   head
     title='Murphy Blog'
-    link(rel='stylesheet' href='../public/style.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
-    block content
+  	header
+  		h1 Murphy Site
+  	.container
+  		.main-content
+    		block content
+    	.sidebar
+    		block sidebar
+    footer
+    	p Running with help of Express, Pug, and Stylus 👍
     	
 
 
