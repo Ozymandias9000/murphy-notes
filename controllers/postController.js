@@ -15,3 +15,8 @@ exports.addpost = async (req, res) => {
 	await postData.save();
 	res.redirect('/');
 };
+
+exports.deletepost = async (req, res) => {
+	await Post.findOneAndRemove({'_id': req.params.id});
+	res.redirect('/');
+}

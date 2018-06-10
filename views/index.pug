@@ -4,10 +4,15 @@ block content
 
 	.posts
 		for post in posts
-			p.post #{post.body}
+			.post--container
+				p.post #{post.body}
+				.delete
+					form(action=`/delete/${post._id}` method='POST')
+						button.delete--button(type='submit') X
 
-	form(action='/addpost' method='POST')
-		label(for='postBody') Add Post
-		textarea(name='postBody')
-		input(type='submit' value='Add Post')
+	.add-post--container
+		form.add-post(action='/addpost' method='POST')
+			label(for='postBody') Add Post
+			textarea(name='postBody')
+			input(type='submit' value='Add Post')
 

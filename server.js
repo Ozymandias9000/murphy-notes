@@ -38,6 +38,7 @@ app.use(express.static(__dirname + '/public'));
 // Routes
 app.get('/', catchErrors(postController.getposts));
 app.post('/addpost', postController.addpost);
+app.post('/delete/:id', catchErrors(postController.deletepost));
 //
 
 
