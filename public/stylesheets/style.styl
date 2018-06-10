@@ -1,0 +1,51 @@
+@import 'nib'
+
+global-reset()
+
+black = #111111
+main-color = #DDDa4d
+background-color = #faf9f0
+
+:root
+	font-size 18px
+
+body
+	height 100vh
+	width 100vw
+	display grid
+	grid: 1fr 1fr 1fr 1fr / 1fr 8fr 1fr
+	grid-auto-flow: row
+	justify-items center
+	align-items center
+	box-sizing border-box
+	font-family 'Georgia'
+	background-color background-color
+	color black
+
+header
+	padding 50px 10px
+	color main-color
+	font-size 3rem
+	grid-column: 1 / -1
+
+.container
+	grid-column: 1/-1
+
+.main-content
+	display grid
+
+
+.posts
+	grid-column:  1 / -1
+
+.post
+	font-size 2rem
+	border 2px solid #BADA55
+	padding 10px
+
+.footer
+	width 100vw
+	bottom: 10px
+	position: fixed
+	text-align: center
+	font-size .75rem

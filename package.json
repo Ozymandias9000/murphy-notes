@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js -e js,pug"
   },
   "author": "",
   "license": "ISC",
@@ -14,10 +14,12 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongo": "^0.1.0",
-    "mongoose": "^5.1.1",
+    "mongoose": "^5.1.4",
     "nib": "^1.1.2",
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
 }
