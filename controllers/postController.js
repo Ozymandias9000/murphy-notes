@@ -9,6 +9,10 @@ exports.getposts = async (req, res) => {
 };
 
 exports.addpost = async (req, res) => {
+	if (req.body.postBody === '') {
+		res.redirect('/');
+		return;
+	}
 	const postData = new Post({
 		body: req.body.postBody
 	});

@@ -5,7 +5,7 @@ block content
 	.posts
 		for post in posts
 			.post--container
-				p.post #{post.body}
+				.post #{post.body}
 				.delete
 					form(action=`/delete/${post._id}` method='POST')
 						button.delete--button(type='submit') X

@@ -18,7 +18,9 @@ body
 	grid-auto-flow: row
 	justify-items center
 	box-sizing border-box
-	font-family 'Georgia'
+	font-family 'Georgia', sans-serif
+	letter-spacing: .5px
+	line-height: 1.5
 	background-color background-color
 	color black
 
@@ -41,7 +43,7 @@ header
 
 .posts
 	display grid
-	grid-template-rows: repeat(auto-fill, minmax(50px, 1fr))
+	grid-template-rows: repeat(auto-fill, minmax(min-content, auto))
 	grid-gap: 10px
 
 .post--container
@@ -91,7 +93,7 @@ header
 	color #C0ffee
 	bottom: 0px
 	display grid
-	grid-row -1/span 1
+	grid-row 3/span 1
 	grid-column: 1/-1
 	justify-content: center
 	align-items: center
