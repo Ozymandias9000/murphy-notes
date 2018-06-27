@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js -e js,pug"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "body-parser": "^1.18.3",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "express-validator": "^5.2.0",
     "mongo": "^0.1.0",
     "mongoose": "^5.1.4",
     "nib": "^1.1.2",
