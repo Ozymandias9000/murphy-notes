@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const postSchema = new mongoose.Schema({ body: String });
-const Post = mongoose.model("Post", postSchema);
+const Post = mongoose.model("Post");
 const { sanitizeBody } = require("express-validator/filter");
 
 exports.getposts = async (req, res) => {
@@ -21,11 +20,10 @@ exports.addpost = [
       res.redirect("/");
       return;
     }
-
     const postData = new Post({
       body: req.body.postBody
     });
-    await postData.save();
+    await postData.save().catch(err => console.log(err));
     res.redirect("/");
   }
 ];

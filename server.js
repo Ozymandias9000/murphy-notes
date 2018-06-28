@@ -5,8 +5,10 @@ const bodyParser = require("body-parser");
 const stylus = require("stylus");
 const nib = require("nib");
 const { catchErrors } = require("./handlers/errorHandlers");
-const postController = require("./controllers/postController");
 require("dotenv").config({ path: "variables.env" });
+require("./models/Post");
+
+const postController = require("./controllers/postController");
 
 // Use bodyParser
 app.use(bodyParser.json());

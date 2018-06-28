@@ -6,6 +6,9 @@ block content
 		for post in posts
 			.post--container
 				.post #{post.body}
+					p
+						- const timeStamp = (post.created)
+						=timeStamp.toLocaleString('en-us')
 				.delete
 					form(action=`/delete/${post._id}` method='POST')
 						button.delete--button(type='submit') X
@@ -15,4 +18,3 @@ block content
 			label(for='postBody') Add Post
 			textarea(name='postBody')
 			input(type='submit' value='Add Post')
-

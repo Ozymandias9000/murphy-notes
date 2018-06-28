@@ -4,14 +4,17 @@
 global-reset()
 
 
-
 black = #111111
 red = #FF4136
 border-color = #BADA55
-background-color = #faf9f0
+background-color = linear-gradient(#faf9f0, #faf9dd)
 
 :root
 	font-size 18px
+
+html
+	width 100vw
+	height 100vh
 
 body
 	height 100vh
@@ -31,6 +34,7 @@ header
 	padding 50px 10px
 	align-self: center
 	color black
+	white-space nowrap
 	font-size 3rem
 	grid-column 1 / -1
 	grid-row 1 / span 1
@@ -59,6 +63,9 @@ header
 
 .post
 	font-size 1rem
+
+.post p
+	font-size .5rem
 
 .delete
 	justify-self: center
@@ -107,8 +114,8 @@ header
 	color #C0ffee
 	bottom: 0px
 	display grid
-	grid-row 3/span 1
-	grid-column: 1/-1
+	grid-row 3/ span 1
+	grid-column 1/-1
 	justify-content: center
 	align-items: center
 	font-size .75rem
