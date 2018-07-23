@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const Post = mongoose.model("Post");
+const markdown = require("marked");
 const { sanitizeBody } = require("express-validator/filter");
 
 exports.getposts = async (req, res) => {
   await Post.find({}, (err, posts) => {
-    res.render("index", { posts });
+    res.render("index", { posts, markdown });
   });
 };
 

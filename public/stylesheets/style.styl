@@ -1,16 +1,14 @@
 @import 'nib'
 @import url('https://fonts.googleapis.com/css?family=Spectral')
 @import url('http://fonts.googleapis.com/css?family=Arizonia')
-global-reset()
-
 
 black = #111111
 red = #FF4136
 border-color = #BADA55
-background-color = linear-gradient(#faf9f0, #faf9dd)
+background-color = #faf9dd
 
 :root
-	font-size 18px
+	font-size 20px
 
 *
 	box-sizing border-box
@@ -20,6 +18,8 @@ html
 	height 100vh
 
 body
+	margin 0
+	padding 0
 	height 100vh
 	width 100vw
 	display grid
@@ -37,7 +37,7 @@ header
 	padding 50px 10px
 	align-self: center
 	white-space nowrap
-	font-size 4rem
+	font-size 2.5rem
 	font-family Arizonia
 	grid-column 1 / -1
 	grid-row 1 / span 1
@@ -66,12 +66,12 @@ header
 .post--container
 	display grid
 	grid-template-columns: 11fr 1fr
-	padding 30px
+	padding 60px 30px 60px 30px
 
 .post
 	font-size 1rem
 
-.post p
+.post p:last-of-type
 	font-size .5rem
 
 .delete

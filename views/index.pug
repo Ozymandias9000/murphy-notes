@@ -5,7 +5,7 @@ block content
 	.posts
 		for post in posts
 			.post--container
-				.post #{post.body}
+				.post!= markdown(post.body)
 					p
 						- const timeStamp = (post.created)
 						=timeStamp.toLocaleString('en-us')

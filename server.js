@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const stylus = require("stylus");
 const nib = require("nib");
 const { catchErrors } = require("./handlers/errorHandlers");
+
 require("dotenv").config({ path: "variables.env" });
 require("./models/Post");
 
