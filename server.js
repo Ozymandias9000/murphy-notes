@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const stylus = require("stylus");
 const nib = require("nib");
-const { catchErrors } = require("./handlers/errorHandlers");
 
 require("dotenv").config({ path: "variables.env" });
 require("./models/Post");
@@ -39,15 +38,13 @@ app.set("view engine", "pug");
 app.use(express.static(__dirname + "/public"));
 
 // Routes
-app.get("/", catchErrors(postController.getposts));
+app.get("/", postController.getposts);
 app.post("/addpost", postController.addpost);
-app.post("/delete/:id", catchErrors(postController.deletepost));
+app.post("/delete/:id", postController.deletepost);
 //
 
 // Listen on PORT
 app.set("port", process.env.PORT || 1234);
-const server = catchErrors(
-  app.listen(app.get("port"), () => {
-    console.log(`Server listening -> PORT 1234`);
-  })
-);
+app.listen(app.get("port"), () => {
+  console.log(`Server listening -> PORT 1234`);
+});
