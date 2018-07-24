@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use mongoose to interface with mongo
-mongoose.connect("mongodb://localhost:27017/murphy_blog");
+mongoose.connect(
+  "mongodb://heroku_0g0l9z69:su2eipgcplcbu5m9atog04lv07@ds147451.mlab.com:47451/heroku_0g0l9z69"
+);
 
 // Use stylus & nib for CSS
 function compile(str, path) {
