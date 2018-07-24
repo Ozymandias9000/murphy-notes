@@ -16,5 +16,5 @@ block content
 	.add-post--container
 		form.add-post(action='/addpost' method='POST')
 			label(for='postBody') Add Post
-			textarea(name='postBody')
+			textarea(name='postBody' placeholder='Add Markdown here...')
 			input(type='submit' value='Add Post')
