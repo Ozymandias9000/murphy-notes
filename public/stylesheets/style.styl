@@ -35,10 +35,11 @@ body
 
 header
 	padding 50px 10px
-	align-self: center
+	align-self center
+	text-align center
 	white-space nowrap
 	font-size 2.5rem
-	font-family Arizonia, Georgia, sans-serif;
+	font-family Arizonia, Georgia, sans-serif
 	grid-column 1 / -1
 	grid-row 1 / span 1
 
@@ -70,9 +71,15 @@ header
 
 .post
 	font-size 1rem
-
-.post p:last-of-type
-	font-size .5rem
+	& p:last-of-type
+		font-size .5rem
+	& img
+		position relative
+		float right
+		height 200px
+		padding 10px
+		width auto
+		transform translateY(-50%)
 
 .delete
 	justify-self center
@@ -143,3 +150,13 @@ header
 
 	header
 		font-size 1.8rem
+
+	.post
+		padding 40px 0 40px 0
+		display flex
+		flex-direction column
+		& img
+			height auto
+			float none
+			width 100%
+			transform translateY(0%)
